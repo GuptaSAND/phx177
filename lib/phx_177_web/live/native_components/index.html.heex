@@ -1,0 +1,71 @@
+<%!-- DEVELOPMENT/TESTING --%>
+
+<p><strong>Native Components Testing</strong></p>
+<br />
+
+<section aria-labelledby="modal_testing" class="card bg-base-100 shadow-xl">
+  <p><strong> Modal Toggle Testing</strong></p>
+
+  <div class="flex">
+    <button
+      class="btn btn-primary ml-4"
+      phx-click={JS.show(to: "#my-modal2", transition: "fade-in")}
+    >
+      show modal
+    </button>
+
+    <button
+      class="btn btn-primary ml-4"
+      phx-click={JS.hide(to: "#my-modal2", transition: "fade-out-scale")}
+    >
+      hide modal
+    </button>
+
+    <button class="btn  btn-primary ml-4" phx-click={JS.toggle(to: "#my-modal2")}>
+      toggle modal
+    </button>
+  </div>
+
+  <div class="modal-box" id="my-modal2">
+    <h3 class="font-bold text-lg">Congratulations !</h3>
+
+    <p class="py-4">Your Second Modal Showed !</p>
+
+    <div class="modal-action">
+      <button class="btn" phx-click={JS.hide(to: "#my-modal2", transition: "fade-out-scale")}>
+        hide modal
+      </button>
+    </div>
+  </div>
+
+  <p><strong>Modal Popup Testing</strong></p>
+  <div class="flex">
+    <label for="css-modal" class="btn modal-button">CSS/DaisyUI modal</label>
+    <%!-- Put this part before </body> tag --%>
+    <input type="checkbox" id="css-modal" class="modal-toggle" />
+    <div class="modal">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg">Congratulations !</h3>
+
+        <p class="py-4">Your Modal Showed !</p>
+
+        <div class="modal-action">
+          <label for="css-modal" class="btn">Yay!</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br />
+
+<section aria-labelledby="flash_testing">
+  <div class="card bg-base-100 shadow-xl">
+    <p><strong>FLASH Testing</strong></p>
+    <div class="flex">
+      <button phx-click="flash" class="btn btn-primary ml-4">Flash</button>
+      <button phx-click="message" class="btn btn-primary ml-4">Message</button>
+    </div>
+  </div>
+  <br />
+</section>

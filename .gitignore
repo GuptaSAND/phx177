@@ -1,0 +1,94 @@
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+meta-*.tar
+
+# If NPM crashes, it generates a log, let's ignore it too.
+npm-debug.log
+
+# Any exe files
+*.exe
+
+# Any .dot files generated from mix xref
+*.dot
+
+# Ignore file upload directory.
+/priv/static/uploads/
+/priv/static/assets
+/priv/static/cache_manifest.json
+/priv/static/robots*.gz
+/priv/static/images
+/priv/static
+
+# The npm asset repo.
+/node_modules
+/assets/node_modules/
+/assets/package-lock.json
+
+
+# Installer-related files
+/installer/_build
+/installer/tmp
+/installer/doc
+/installer/deps
+
+
+# The doc directory
+/doc/
+
+.env
+
+# Ignore config scripts
+*.thor
+
+.elixir_ls
+
+# other misc
+*.beam
+.idea
+*.iml
+.DS_Store
+**/**/.DS_Store
+# mix.lock
+**/**/*.tmp   # ignore temp files
+
+# python compiled files
+/priv/python/*.pyc
+/priv/python/__pycache__
+
+#
+# Config files.
+#    Sample templates are checked in
+#
+
+
+
+# vscode stuff
+workspace.code-workspace
+.vscode
+
+
+# dialyzer stuff
+/priv/plts/*.plt
+/priv/plts/*.plt.hash
+
+# Sobelow
+.sobelow
+

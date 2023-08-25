@@ -1,0 +1,109 @@
+<%!-- DEVELOPMENT/TESTING --%>
+
+<p><strong>Heex Syntax Testing</strong></p>
+
+<section aria-labelledby="interop_testing">
+  <div class="card bg-base-100 shadow-xl">
+    <div tabindex="0" class="collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">
+        DEBUGGING ASSIGNS
+      </div>
+      <div class="collapse-content">
+        <pre>
+          <u>Assigns: </u><%= inspect(assigns, pretty: true) %>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="card bg-base-100 shadow-xl">
+    <div tabindex="0" class="collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">
+        VARIABLE OUTPUT TO HTML
+      </div>
+      <div class="collapse-content">
+        <p>--------------------------VARIABLE OUTPUT TO HTML-------------------------------</p>
+
+        <p>HTML - HELLO</p>
+        <% phoenix_msg = "Phoenix Hello" %> <%= phoenix_msg %>
+        <div x-data="{alpine_msg:'AlpineJS Hello'}">
+          <strong x-text="alpine_msg"></strong>
+        </div>
+
+        <p id="js_var">..JavaScript not working..</p>
+
+        <script>
+          let js_msg="JavaScript Hello";
+          document.getElementById('js_var').innerHTML = "JavaScript is working";
+          console.log("Hello from development page")
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="card bg-base-100 shadow-xl">
+    <div tabindex="0" class="collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">
+        ALPINE INTEROP
+      </div>
+      <div class="collapse-content">
+        <p>--------------------------ALPINE INTEROP-------------------------------</p>
+
+        <div x-data="{js_msg}">
+          Alpine accessing javascript variable:<strong x-text="js_msg"></strong>
+        </div>
+
+        <p>
+          Alpine accessing phoenix assign:<strong
+            x-data={"{phx_asgn: #{@data_loading}}"}
+            x-text="phx_asgn"
+          ></strong>
+        </p>
+
+        <p>
+          Alpine accessing phoenix variable:<strong
+            x-data={"{phx_var: '#{phoenix_msg}'}"}
+            x-text="phx_var"
+          ></strong>
+        </p>
+
+        <p x-ref="myObj">Alpine changing DOM object</p>
+        <button @click="$refs.myObj.remove()" class="btn outline">Click to change</button>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <div class="card bg-base-100 shadow-xl">
+    <div tabindex="0" class="collapse collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">
+        PHOENIX INTEROP
+      </div>
+      <div class="collapse-content">
+        <p>--------------------------PHOENIX INTEROP-------------------------------</p>
+
+        <p class="foo">Phoenix accessing HTML class attribute: <%= :foo %></p>
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <div class="card bg-base-100 shadow-xl">
+    <div tabindex="0" class="collapse  collapse-arrow">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">
+        JAVASCRIPT INTEROP
+      </div>
+      <div class="collapse-content">
+        <p>--------------------------JAVASCRIPT INTEROP-------------------------------</p>
+      </div>
+    </div>
+  </div>
+  <br />
+</section>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Phoenix Framework">
+      <%= assigns[:page_title] || "Phx177" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+
+  <body class="bg-white antialiased">
+    <div class="flex px-4 gap-4  border-b border-zinc-100 py-3 text-sm">
+      <div class="flex items-center gap-4">
+        <a href="/">
+          <img src={~p"/images/logo.svg"} width="36" />
+        </a>
+        <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
+          v<%= Application.spec(:phoenix, :vsn) %>
+        </p>
+      </div>
+      <strong>Phoenix behavior/interop testing</strong>
+    </div>
+
+    <%!-- Menu Sidebar --%>
+    <nav class="fixed left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto bg-base-100
+                      text-base-content transition origin-left transform w-60 md:translate-x-0">
+      <%= _nav(assigns) %>
+    </nav>
+
+    <%!-- Inner Content --%>
+    <div class="relative h-full p-2 transition md:ml-60">
+      <%= @inner_content %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<ul class="menu">
+  <%!-- TESTING MENU --%>
+  <div class="navbar-center py-0">
+    <li>
+      <.link
+        navigate={~p"/3rd_party_components"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-balance-scale mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("External Components") %></span>
+      </.link>
+    </li>
+    
+    <li>
+      <.link
+        navigate={~p"/native_components"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-balance-scale mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("Native Components") %></span>
+      </.link>
+    </li>
+    
+    <li>
+      <.link
+        navigate={~p"/heex"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-balance-scale mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("Heex Syntax") %></span>
+      </.link>
+    </li>
+    
+    <li>
+      <.link
+        navigate={~p"/daisyui"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-balance-scale mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("Daisy UI/Tailwind") %></span>
+      </.link>
+    </li>
+    
+    <li>
+      <.link
+        navigate={~p"/alpine"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-balance-scale mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("AlpineJS") %></span>
+      </.link>
+    </li>
+    
+    <li>
+      <.link
+        navigate={~p"/users"}
+        class="px-4 py-2 ml-8 cursor-pointer 
+                            transition group  "
+      >
+        <i class="fa-duotone fa-hands-usd mr-2 transition group-hover:text-red-600"></i>
+        <span class="text-sm"><%= gettext("phx.gen.live - Users") %></span>
+      </.link>
+    </li>
+  </div>
+</ul>

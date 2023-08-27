@@ -1,8 +1,7 @@
 # phx177
  repo for testing phoenix behaviors
  
- https://github.com/milangupta1/GuptaSAND/phx_177/blob/main/image.jpg?raw=true
-
+ https://github.com/GuptaSAND/phx177/blob/main/assets/static/images/phx177-Screenshot.png?raw=true
 
  ## Purpose
  - provide developer examples on integration techniques with 3rd party components/libraries

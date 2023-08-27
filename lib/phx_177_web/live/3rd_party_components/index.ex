@@ -42,7 +42,7 @@ defmodule Phx177Web.ThirdPartyComponentLive.Index do
 
   defp apply_action(socket, :index, _params) do
     socket
-    |> assign(:page_title, "Development Page")
+    |> assign(:page_title, "3rd Party Components Page")
   end
 
   defp apply_action(socket, _, _params) do

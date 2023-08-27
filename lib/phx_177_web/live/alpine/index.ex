@@ -23,7 +23,7 @@ defmodule Phx177Web.AlpineLive.Index do
 
   defp apply_action(socket, :index, _params) do
     socket
-    |> assign(:page_title, "Development Page")
+    |> assign(:page_title, "Alpine Page")
   end
 
   defp apply_action(socket, _, _params) do

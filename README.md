@@ -44,7 +44,7 @@ There is conflicting documentation in phoenix - recommendation to use npm with b
 - Am using the standard/recommended way to integrate Alpine.js from Phoenix documentation (app.js).
 - Issues around initialization of Alpine in 1.7.7 .. am seeing sporadic errors in browser console when moving between pages. 
 
-### Tailwind/DaisyUI
+### Tailwind/DaisyUI - CSS
 - Have eliminated the forms import for Tailwind as there is some mentions that this conflicts with DaisyUI
 - Am still unclear if something needs to be included in app.css for DaisyUI (currently only in tailwind.config.js)
 - Use of prefixes in DaisyUI breaks some 3rd party components (LiveSelect)

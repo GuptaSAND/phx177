@@ -6,7 +6,7 @@ defmodule Phx177Web.NativeComponentLive.Index do
   # @flash_timing 5_000
 
   @impl true
-  def mount(params, _session, socket) do
+  def mount(_params, _session, socket) do
     {:ok, socket}
   end
 

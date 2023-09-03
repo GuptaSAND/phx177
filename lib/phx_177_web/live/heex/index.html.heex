@@ -1,6 +1,6 @@
 <%!-- DEVELOPMENT/TESTING --%>
 <p><strong>Heex Syntax Testing</strong></p>
-
+ <span x-init="console.log('Hello from Heex page(x-init)')"></span>
 <section aria-labelledby="interop_testing">
   <div class="card bg-base-100 shadow-xl">
     <div tabindex="0" class="collapse collapse-arrow">
@@ -37,8 +37,8 @@
         
         <script>
           let js_msg="JavaScript Hello";
-          document.getElementById('js_var').innerHTML = "JavaScript is working";
-          console.log("Hello from Heex page")
+          document.getElementById("js_var").innerHTML = "JavaScript is working";
+          console.log("Hello from Heex page");
         </script>
       </div>
     </div>
@@ -54,10 +54,6 @@
       <div class="collapse-content">
         <p>--------------------------ALPINE INTEROP-------------------------------</p>
         
-        <div x-data="{js_msg}">
-          Alpine accessing javascript variable:<strong x-text="js_msg"></strong>
-        </div>
-        
         <p>
           Alpine accessing phoenix assign:<strong
             x-data={"{phx_asgn: #{@data_loading}}"}
@@ -71,9 +67,6 @@
             x-text="phx_var"
           ></strong>
         </p>
-        
-        <p x-ref="myObj">Alpine changing DOM object</p>
-         <button @click="$refs.myObj.remove()" class="btn outline">Click to change</button>
       </div>
     </div>
   </div>

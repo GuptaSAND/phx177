@@ -32,7 +32,7 @@ config :phx_177, Phx177.Mailer, adapter: Swoosh.Adapters.Local
 # Configure esbuild (the version is required)
 # --target=esnext ->  latest features supported / default is es2017
 config :esbuild,
-  version: "0.19.2",
+  version: "0.17.11",
   dev: [
     args: ~w(js/app.js
     --analyze

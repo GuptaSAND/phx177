@@ -1,7 +1,6 @@
 <%!-- DEVELOPMENT/TESTING --%>
-
 <p><strong>Alpine.JS Testing</strong></p>
-
+ <span x-init="console.log('Hello from Alpine page(x-init)')"></span>
 <section aria-labelledby="alpinejs_testing">
   <div class="card bg-base-100 shadow-xl">
     <div tabindex="0" class="collapse collapse-arrow">
@@ -9,33 +8,29 @@
       <div class="collapse-title text-xl font-medium">
         ALPINE INTEROP
       </div>
+      
       <div class="collapse-content">
         <p>--------------------------ALPINE INTEROP-------------------------------</p>
-
+        
         <div x-data="{alpine_msg:'AlpineJS Hello'}">
           Alpine variable:<strong x-text="alpine_msg"></strong>
         </div>
-
-        <% phoenix_msg = "Phoenix Hello" %> <%= phoenix_msg %>
-
+         <% phoenix_msg = "Phoenix Hello" %> <%= phoenix_msg %>
         <p>
           Alpine accessing phoenix assign:<strong
             x-data={"{phx_asgn: #{@data_loading}}"}
             x-text="phx_asgn"
           ></strong>
         </p>
-
+        
         <p>
           Alpine accessing phoenix variable:<strong
             x-data={"{phx_var: '#{phoenix_msg}'}"}
             x-text="phx_var"
           ></strong>
         </p>
-
-        <p x-ref="myObj">Alpine changing DOM object</p>
-        <button @click="$refs.myObj.remove()" class="btn outline">Click to change</button>
       </div>
     </div>
   </div>
-  <br />
+   <br />
 </section>

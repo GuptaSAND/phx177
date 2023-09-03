@@ -67,12 +67,13 @@ phx-value-key="error"><%= live_flash(@flash, :error) %></p>
     <div class="flex items-stretch min-w-full">
       <%!-- date picker --%>
       <div
-        id="daterangeselector"
+        id="daterangepicker"
         phx-hook="AlpineJSHook"
-        x-init="init()"
+        x-init=""
         x-data={"{
                 value: #{Jason.encode!(@date_range)},
               init() {
+                  console.log('daterangepicker init() - inline source');
                   $(this.$refs.picker).daterangepicker({
                       startDate: this.value[0],
                       endDate: this.value[1],
@@ -94,11 +95,13 @@ phx-value-key="error"><%= live_flash(@flash, :error) %></p>
                   });
 
                   this.$watch('value', () => {
+                                      console.log('daterangepicker watch(value)');
                       $(this.$refs.picker).data('daterangepicker').setStartDate(this.value[0])
                       $(this.$refs.picker).data('daterangepicker').setEndDate(this.value[1])
                   });
 
                   $(this.$refs.picker).on('apply.daterangepicker', function(ev, picker) {
+                                                          console.log('daterangepicker watch(apply)');
                     // console.log(picker.startDate.format('YYYY-MM-DD'));
                     // console.log(picker.endDate.format('YYYY-MM-DD'));
                     $dispatch('daterangepicker', { start_dt: picker.startDate, end_dt: picker.endDate })

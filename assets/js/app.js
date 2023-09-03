@@ -39,7 +39,7 @@ const Hooks = {
         }
     },
     // live_select component
-    live_select: live_select
+    LiveSelect: live_select
 }
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
